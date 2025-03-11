@@ -1,4 +1,5 @@
 requests
 Flask
 markdown
+gunicorn
 langchain-groq
