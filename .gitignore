@@ -1,28 +1,20 @@
-# Python bytecode files
 *.pyc
 *.pyo
 __pycache__/
 
-# Virtual environment directory (tt)
 tt/
 
-# Flask instance folder
 instance/
 
-# Flask configuration file
 *.env
 
-# IDE and text editor files
 .vscode/
 .idea/
 
-# macOS files
 .DS_Store
 
-# Windows files
 Thumbs.db
 
-# Package distribution and build folders
 build/
 dist/
 *.egg-info/
