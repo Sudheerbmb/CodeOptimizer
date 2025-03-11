@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Optimization with Groq</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Code Optimization with Groq</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Submit Code for Optimization</h2>
+            <form method="POST">
+                <label for="code">Your Python Code:</label>
+                <textarea name="code" id="code" rows="10" placeholder="Paste your Python code here">{{ code }}</textarea>
+
+                <label for="model">Select Model:</label>
+                <select name="model" id="model">
+                    {% for model in models %}
+                        <option value="{{ model }}" {% if model == 'llama-3.1-8b-instant' %} selected {% endif %}>{{ model }}</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit">Optimize Code</button>
+            </form>
+        </section>
+
+        {% if optimized_code %}
+        <section class="result-section">
+            <h2>Optimized Code and Explanation:</h2>
+            <div class="result-content">
+                <!-- Render the Markdown as HTML -->
+                <div>{{ optimized_code | safe }}</div>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Groq Code Optimization Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
