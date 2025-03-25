@@ -4,7 +4,7 @@ from langchain_groq import ChatGroq
 
 app = Flask(__name__)
 
-groq_api_key = "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"
+groq_api_key = ""
 
 models = ["llama-3.1-8b-instant"]
 
